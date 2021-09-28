@@ -1,8 +1,12 @@
 var readlinesync = require("readline-sync");
 
-score =0; 
+var score =0; 
 
-console.log("KAUSHIK'S BACHELORS PARTY!\n\nThis is a fun test to check if you are elligible for Kaushik's bachelor party. Please answer by typing in the first 3 characters/alphabet in lowercase ONLY.\nFor Eg: If the answer is 'anaconda', you type just'ana'. You need a minimum score of 4 to pass\n")
+console.log("\nKAUSHIK'S BACHELORS PARTY!\n\n");
+
+var userName = readlinesync.question("Please enter your name\n\n")
+
+console.log("\nHi "+userName.toUpperCase()+", \n\nThis is a fun test to check if you are eligible for Kaushik's bachelor party. Please answer by typing in the first 3 characters/alphabet in lowercase ONLY.\nFor Eg: If the answer is 'anaconda', you type just'ana'. You need a minimum score of 4 to pass\n")
 
 questionOne = {
   question: "Name of Kaushik's first bike? ",
@@ -60,8 +64,8 @@ var q5 = readlinesync.question(questionFive.question);
 qnA(q5, questionFive.answer);
 
 if(score>3){
-  console.log("\nYour final score is: "+score+"!! Congragulations, you seem to know Kaushik well enough to attend his Bachelor's party");
+  console.log("\nGreat going "+userName+". Your final score is: "+score+"!! Congragulations, you seem to know Kaushik well enough to attend his Bachelor's party");
 }
 else {
-  console.log("\nYour final score is: "+score+" :( You do not seem to know Kaushik well enough, please retry this test to attend his Bachelor's party");
+  console.log("\nThat's bad "+userName+". Your final score is: "+score+" :( You do not seem to know Kaushik well enough, please retry this test to attend his Bachelor's party");
 }
